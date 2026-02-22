@@ -1,0 +1,83 @@
+[
+  {
+    "id": "project:realtime-observability-dashboard",
+    "type": "project",
+    "title": "Realtime Observability Dashboard",
+    "summary": "Log, metric ve alert akışlarını tek panelde birleştirerek incident triage süresini kısaltan iç platform projesi.",
+    "tags": "dashboard dx observability react",
+    "content": "## Problem\nOperasyon ekibi farklı dashboard ve araçlar arasında sürekli context switch yaptığı için incident analizi uzuyordu.\n\n## Yaklaşım\nEvent kaynaklarını tek bir normalizasyon katmanında birleştirip kritik sinyaller için önceliklendirme mekanizması kurdum.\n\n## Sonuç\nOrtalama tespit ve müdahale süresi görünür biçimde düştü, alert yorgunluğu azaldı.",
+    "url": "/projects/realtime-observability-dashboard"
+  },
+  {
+    "id": "note:clean-architecture-on-nextjs",
+    "type": "note",
+    "title": "Next.js App Router'da Clean Architecture Sınırları",
+    "summary": "App Router projelerinde domain, application ve UI sınırlarını pratikte nerede çizdiğime dair notlar.",
+    "tags": "architecture nextjs typescript",
+    "content": "Monorepo veya tek repo fark etmeksizin, içerik ve domain servislerini framework bağımsız tutmak uzun vadede değişim maliyetini azaltıyor.\n\n## Sınır Prensibi\nUI katmanı yalnızca use-case çağırmalı; veri erişim detayını bilmemeli.\n\n## Pratik Sonuç\nTest kapsamını artırmak kolaylaşıyor ve framework geçişleri daha düşük riskle yönetiliyor.",
+    "url": "/writing/clean-architecture-on-nextjs"
+  },
+  {
+    "id": "bookmark:react-server-components-practical-notes",
+    "type": "bookmark",
+    "title": "React Server Components Practical Notes",
+    "summary": "RSC kararlarını netleştirmek için tekrar baktığım resmi notlar ve pratik örnekler.",
+    "tags": "nextjs react rsc",
+    "content": "RSC tasarımında temel karar noktaları:\n- stateful etkileşim gereksinimi\n- veri erişiminin güvenlik sınırları\n- bundle boyutu etkisi\n\nBu kaynağı özellikle component sorumluluğu belirlerken kullanıyorum.",
+    "url": "/bookmarks/react-server-components-practical-notes"
+  },
+  {
+    "id": "note:ship-faster-with-content-schemas",
+    "type": "note",
+    "title": "Content Schema ile Daha Hızlı ve Güvenli Yayın",
+    "summary": "Frontmatter şeması ve otomatik validasyon ile içerik operasyonunda hız kazanma deneyimi.",
+    "tags": "content workflow zod",
+    "content": "İçerik hatalarının büyük bölümü yapısal tutarsızlıklardan geliyor. Basit bir Zod şeması bile yayın kalitesini ciddi artırıyor.\n\n## Kritik Alanlar\n- slug standardizasyonu\n- tarih formatı\n- zorunlu özet ve etiketler\n\nBu üçlü tek başına arama ve filtre deneyimini güçlendiriyor.",
+    "url": "/writing/ship-faster-with-content-schemas"
+  },
+  {
+    "id": "bookmark:opentelemetry-js-getting-started",
+    "type": "bookmark",
+    "title": "OpenTelemetry JS Getting Started",
+    "summary": "Node ve web uygulamalarında telemetry sinyallerini standartlaştırmak için başlangıç noktası.",
+    "tags": "javascript observability opentelemetry",
+    "content": "Observability altyapısı kurarken sinyal modelini doğru seçmek en kritik adım.\n\nBu doküman; tracing, metrics ve exporter kararlarında yönlendirici oluyor.",
+    "url": "/bookmarks/opentelemetry-js-getting-started"
+  },
+  {
+    "id": "project:content-pipeline-rewrite",
+    "type": "project",
+    "title": "Content Pipeline Rewrite",
+    "summary": "Markdown odaklı içerik üretimini otomatik validasyon ve statik index ile ölçeklenebilir hale getiren yeniden yazım çalışması.",
+    "tags": "automation content typescript",
+    "content": "## Problem\nİçerik ekleme süreçleri elle ve dağınık yürüdüğü için yayın kalitesi düşüyordu.\n\n## Yaklaşım\nFrontmatter doğrulaması, slug çakışma kontrolü ve build-time arama index üretimini aynı pipeline içinde topladım.\n\n## Sonuç\nEditöryel ekip daha hızlı yayın almaya başladı; hatalı içerik deploy edilmesi belirgin şekilde azaldı.",
+    "url": "/projects/content-pipeline-rewrite"
+  },
+  {
+    "id": "note:client-search-at-static-scale",
+    "type": "note",
+    "title": "Static Sitelerde Hızlı Client-side Arama",
+    "summary": "Build-time index üreterek runtime backend olmadan karma içerikte hızlı arama sunma yaklaşımı.",
+    "tags": "performance search static-site",
+    "content": "Küçük ve orta ölçekli içerik sitelerinde aramayı sunucu endpointine taşımak çoğu zaman gereksiz karmaşıklık oluşturuyor.\n\n## Yaklaşım\nBuild sırasında JSON index üret, istemcide query ile filtrele ve temel skorlamayı title/tag eşleşmesine göre yap.\n\n## Sonuç\nMaliyet düşük kalırken algılanan performans yüksek oluyor.",
+    "url": "/writing/client-search-at-static-scale"
+  },
+  {
+    "id": "bookmark:playwright-best-practices",
+    "type": "bookmark",
+    "title": "Playwright Best Practices",
+    "summary": "E2E testlerin flaky olmaması için locator stratejileri ve test izolasyon önerileri.",
+    "tags": "playwright qa testing",
+    "content": "Locator seçiminde role ve test-id kullanımını dengeli götürmek test bakım maliyetini düşürüyor.\n\nAyrıca ağ bağımlılıklarını azaltmak için mocking stratejileri burada net anlatılıyor.",
+    "url": "/bookmarks/playwright-best-practices"
+  },
+  {
+    "id": "project:performance-budget-rollout",
+    "type": "project",
+    "title": "Performance Budget Rollout",
+    "summary": "Web performans metriklerini release gate haline getirerek Core Web Vitals regresyonlarını erken aşamada yakalayan süreç.",
+    "tags": "frontend performance web-vitals",
+    "content": "## Problem\nSprint sonunda fark edilen performans sorunları düzeltme maliyetini yükseltiyordu.\n\n## Yaklaşım\nKritik sayfalar için bütçe sınırları tanımlayıp CI aşamasında eşik ihlalinde build'i durduran kontrol ekledim.\n\n## Sonuç\nRegresyonlar prod öncesinde yakalanmaya başladı ve kullanıcı deneyimi daha stabil hale geldi.",
+    "url": "/projects/performance-budget-rollout"
+  }
+]
