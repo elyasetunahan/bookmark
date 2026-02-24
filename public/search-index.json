@@ -9,6 +9,24 @@
     "url": "/bookmarks/ctatedev-agent-browser-docs-context"
   },
   {
+    "id": "bookmark:visual-json-editor-by-vercel-labs",
+    "type": "bookmark",
+    "title": "visual-json: Schema-aware ve embeddable visual JSON editor",
+    "summary": "Vercel Labs'in visual-json projesi; schema-aware, extensible ve gömülebilir bir JSON editörü sunuyor.",
+    "tags": "developer-tools editor json react schema",
+    "content": "visual-json, JSON düzenlemeyi daha kullanıcı dostu hale getiren bir araç seti sunuyor.\n\nÖne çıkan tarafları:\n\n- Schema-aware yapı ile JSON şemasıyla uyumlu düzenleme akışları\n- Embeddable ve extensible yaklaşım (ürüne entegre etmeye uygun)\n- Paket ayrımı:\n  - `@visual-json/core`: headless tree model ve operasyonlar\n  - `@visual-json/react`: TreeView/FormView/DiffView dahil React UI bileşenleri\n  - `@visual-json/vscode`: görsel JSON editörü uzantısı\n\nResmi site: https://visual-json.dev",
+    "url": "/bookmarks/visual-json-editor-by-vercel-labs"
+  },
+  {
+    "id": "bookmark:vercel-chat-sdk-changelog",
+    "type": "bookmark",
+    "title": "Vercel Changelog: npm i chat (Chat SDK)",
+    "summary": "Vercel'in Chat SDK duyurusu: tek TypeScript kod tabanıyla Slack, Teams, Discord, GitHub ve diğer platformlara bot dağıtma yaklaşımı.",
+    "tags": "ai-sdk bots chat-sdk typescript vercel",
+    "content": "Bu changelog, `chat` paketini public beta olarak tanıtıyor.\n\nÖne çıkan noktalar:\n\n- Tek kod tabanıyla birden fazla chat platformuna bot dağıtımı\n- Event-driven ve type-safe handler modeli (mention, message, reaction, slash command vb.)\n- JSX ile platforma uyarlanan kart/modaI UI bileşenleri\n- Durum yönetimi için pluggable adapter yaklaşımı (Redis/ioredis/in-memory)\n- `post()` çağrılarında AI SDK text stream desteği ile gerçek zamanlı yanıt akışı\n\nEk doküman: https://chat-sdk.dev/docs",
+    "url": "/bookmarks/vercel-chat-sdk-changelog"
+  },
+  {
     "id": "project:realtime-observability-dashboard",
     "type": "project",
     "title": "Realtime Observability Dashboard",
@@ -27,15 +45,6 @@
     "url": "/writing/clean-architecture-on-nextjs"
   },
   {
-    "id": "bookmark:react-server-components-practical-notes",
-    "type": "bookmark",
-    "title": "React Server Components Practical Notes",
-    "summary": "RSC kararlarını netleştirmek için tekrar baktığım resmi notlar ve pratik örnekler.",
-    "tags": "nextjs react rsc",
-    "content": "RSC tasarımında temel karar noktaları:\n- stateful etkileşim gereksinimi\n- veri erişiminin güvenlik sınırları\n- bundle boyutu etkisi\n\nBu kaynağı özellikle component sorumluluğu belirlerken kullanıyorum.",
-    "url": "/bookmarks/react-server-components-practical-notes"
-  },
-  {
     "id": "note:ship-faster-with-content-schemas",
     "type": "note",
     "title": "Content Schema ile Daha Hızlı ve Güvenli Yayın",
@@ -43,15 +52,6 @@
     "tags": "content workflow zod",
     "content": "İçerik hatalarının büyük bölümü yapısal tutarsızlıklardan geliyor. Basit bir Zod şeması bile yayın kalitesini ciddi artırıyor.\n\n## Kritik Alanlar\n- slug standardizasyonu\n- tarih formatı\n- zorunlu özet ve etiketler\n\nBu üçlü tek başına arama ve filtre deneyimini güçlendiriyor.",
     "url": "/writing/ship-faster-with-content-schemas"
-  },
-  {
-    "id": "bookmark:opentelemetry-js-getting-started",
-    "type": "bookmark",
-    "title": "OpenTelemetry JS Getting Started",
-    "summary": "Node ve web uygulamalarında telemetry sinyallerini standartlaştırmak için başlangıç noktası.",
-    "tags": "javascript observability opentelemetry",
-    "content": "Observability altyapısı kurarken sinyal modelini doğru seçmek en kritik adım.\n\nBu doküman; tracing, metrics ve exporter kararlarında yönlendirici oluyor.",
-    "url": "/bookmarks/opentelemetry-js-getting-started"
   },
   {
     "id": "project:content-pipeline-rewrite",
@@ -70,15 +70,6 @@
     "tags": "performance search static-site",
     "content": "Küçük ve orta ölçekli içerik sitelerinde aramayı sunucu endpointine taşımak çoğu zaman gereksiz karmaşıklık oluşturuyor.\n\n## Yaklaşım\nBuild sırasında JSON index üret, istemcide query ile filtrele ve temel skorlamayı title/tag eşleşmesine göre yap.\n\n## Sonuç\nMaliyet düşük kalırken algılanan performans yüksek oluyor.",
     "url": "/writing/client-search-at-static-scale"
-  },
-  {
-    "id": "bookmark:playwright-best-practices",
-    "type": "bookmark",
-    "title": "Playwright Best Practices",
-    "summary": "E2E testlerin flaky olmaması için locator stratejileri ve test izolasyon önerileri.",
-    "tags": "playwright qa testing",
-    "content": "Locator seçiminde role ve test-id kullanımını dengeli götürmek test bakım maliyetini düşürüyor.\n\nAyrıca ağ bağımlılıklarını azaltmak için mocking stratejileri burada net anlatılıyor.",
-    "url": "/bookmarks/playwright-best-practices"
   },
   {
     "id": "project:performance-budget-rollout",
