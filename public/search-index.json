@@ -1,5 +1,14 @@
 [
   {
+    "id": "bookmark:ctatedev-agent-browser-docs-context",
+    "type": "bookmark",
+    "title": "Agent Browser Dogfood: Repro-first web app QA workflow",
+    "summary": "Vercel Labs dogfood skill: web uygulamalarını sistematik gezip her issue için kanıtlı ve tekrar üretilebilir QA raporu üretme akışı.",
+    "tags": "agent-browser agents qa repro ux-testing",
+    "content": "Dogfood skill'in ana mesajı: uygulamayı rastgele değil, sistematik şekilde gez; her bulguyu anında ve kanıtla dokümante et.\n\nÖne çıkan noktalar:\n\n- Sadece hedef URL zorunlu, diğer parametreler için makul defaultlar var.\n- `agent-browser` binary'sini doğrudan kullanmayı öneriyor (`npx agent-browser` yerine).\n- 6 adımlı akış: initialize -> authenticate -> orient -> explore -> document -> wrap up.\n- Repro-first prensibi: interactive bug'larda video + adım screenshot; statik görsel bug'larda tek annotate screenshot yeterli.\n- Her issue bulunduğu anda rapora eklenmeli; sona bırakılmamalı.\n- Hedef kalite: az ama güçlü kanıtlı bulgu (5-10 iyi dokümante issue), belirsiz toplu liste değil.\n\nTweet referansı: https://x.com/ctatedev/status/2026357704617267314?s=20",
+    "url": "/bookmarks/ctatedev-agent-browser-docs-context"
+  },
+  {
     "id": "project:realtime-observability-dashboard",
     "type": "project",
     "title": "Realtime Observability Dashboard",
