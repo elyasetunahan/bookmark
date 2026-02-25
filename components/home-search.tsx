@@ -22,7 +22,7 @@ export function HomeSearch() {
 
     async function loadIndex(): Promise<void> {
       try {
-        const response = await fetch("/search-index.json", { cache: "force-cache" });
+        const response = await fetch("/search-index.json", { cache: "no-store" });
         if (!response.ok) {
           return;
         }
