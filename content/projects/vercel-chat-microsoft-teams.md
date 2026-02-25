@@ -16,9 +16,10 @@ links:
 `vercel/chat` tabanlı sohbet deneyimini Microsoft Teams kanalına taşıyarak ekiplerin mevcut çalışma alanı içinde AI ile etkileşime geçmesini sağlamak.
 
 ## Kapsam
-- Teams kanalından gelen mesajları chat backend'ine yönlendirme
+- Teams tarafında sadece mention ve direct message trafiğini chat backend'ine yönlendirme
 - Yanıtları Teams formatında geri gönderme
 - Oturum, kullanıcı ve kanal bazlı bağlam yönetimi
+- Şimdilik yalnızca metin mesajı desteği (dosya/ek kapsam dışı)
 
 ## 1) Amaç
 `vercel/chat` uygulamasını Teams içinde çalışır hale getirerek kullanıcıların ayrı bir web arayüzüne geçmeden AI sohbeti kullanmasını sağlamak.
@@ -45,14 +46,14 @@ links:
 
 4. Response Dönüşümü
 - LLM çıktısı Teams mesaj formatına çevrilir.
-- Uzun çıktı durumunda chunking veya kısa özet + devam linki uygulanır.
+- MVP'de tek parça final message gönderilir (streaming Phase 2).
 
 ## 4) Uygulama Adımları
 1. Teams bot kimlik bilgilerini güvenli env değişkenleri olarak ekle.
 2. `/api/teams/messages` endpoint'ini oluştur (POST activity webhook).
 3. Activity doğrulama + imza doğrulama katmanını ekle.
-4. Gelen activity türlerini filtrele (`message`, `conversationUpdate`, `invoke`).
-5. `message` aktivitelerini chat pipeline'a ilet.
+4. Gelen activity türlerini filtrele (`message`, `conversationUpdate`, `invoke`) ve sadece mention/DM mesajlarını işleme al.
+5. `message` aktivitelerinde sadece metin payload'ını chat pipeline'a ilet.
 6. Yanıtı Teams'e geri post et.
 7. Hata senaryoları için fallback mesajları ekle.
 8. Gözlemlenebilirlik: request-id, latency, provider error logları.
@@ -74,6 +75,8 @@ links:
 - Unit: activity parser, session key generator, response formatter.
 - Integration: Teams mock activity -> chat pipeline -> Teams response.
 - E2E: gerçek Teams test tenant üzerinde mention ve thread akışları.
+- Negatif test: kanalda mention olmayan mesajların bot tarafından yok sayılması.
+- Negatif test: dosya/ek mesajlarında "henüz desteklenmiyor" fallback mesajı.
 
 ## 8) Rollout
 1. Internal alpha: 1 ekip, tek kanal.
@@ -87,7 +90,7 @@ links:
 - [ ] Log/alert dashboard hazır
 - [ ] On-call fallback prosedürü yazıldı
 
-## 10) Açık Sorular
-- Teams tarafında sadece mention mı, yoksa tüm kanal mesajları mı dinlenecek?
-- Dosya/ek mesajları MVP kapsamına alınacak mı?
-- Yanıtlar tamamen canlı stream mi olacak yoksa final message modeli mi?
+## 10) Kilitlenmiş Kararlar
+- Kapsam: Mention + Direct Message.
+- İçerik tipi: Şimdilik sadece metin mesajı.
+- Yanıt modeli: MVP'de final message, streaming Phase 2.
