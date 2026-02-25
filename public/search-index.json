@@ -1,5 +1,14 @@
 [
   {
+    "id": "project:vercel-chat-microsoft-teams",
+    "type": "project",
+    "title": "Vercel Chat'i Microsoft Teams'e Entegre Etme",
+    "summary": "https://github.com/vercel/chat projesini Microsoft Teams kanalında kullanılabilir hale getirmek için entegrasyon çalışması.",
+    "tags": "ai integration microsoft-teams nextjs vercel-chat",
+    "content": "## Hedef\n`vercel/chat` tabanlı sohbet deneyimini Microsoft Teams kanalına taşıyarak ekiplerin mevcut çalışma alanı içinde AI ile etkileşime geçmesini sağlamak.\n\n## Kapsam\n- Teams kanalından gelen mesajları chat backend'ine yönlendirme\n- Yanıtları Teams formatında geri gönderme\n- Oturum, kullanıcı ve kanal bazlı bağlam yönetimi\n\n## 1) Amaç\n`vercel/chat` uygulamasını Teams içinde çalışır hale getirerek kullanıcıların ayrı bir web arayüzüne geçmeden AI sohbeti kullanmasını sağlamak.\n\n## 2) Başarı Kriterleri\n- Teams'ten gelen mention veya direct message bot tarafından işlenmeli.\n- Mesaj, `vercel/chat` inference hattına iletilmeli.\n- Yanıt 3-8 saniye içinde Teams'e geri dönmeli (MVP hedefi).\n- Her Teams conversation için bağımsız thread/context tutulmalı.\n\n## 3) Mimari Yaklaşım (MVP)\n1. Teams App + Bot Registration\n- Microsoft Entra App kaydı\n- Azure Bot resource oluşturma\n- Messaging endpoint: `/api/teams/messages`\n\n2. Adapter Katmanı\n- Bot Framework Activity -> uygulama içi normalize edilmiş mesaj modeli\n- Normalize edilen mesajı mevcut chat servis çağrısına dönüştürme\n\n3. Context ve Session Eşleme\n- Ana anahtar: `tenantId + teamId + conversationId + userId`\n- Bu anahtar, `vercel/chat",
+    "url": "/projects/vercel-chat-microsoft-teams"
+  },
+  {
     "id": "bookmark:ctatedev-agent-browser-docs-context",
     "type": "bookmark",
     "title": "Agent Browser Dogfood: Repro-first web app QA workflow",
@@ -23,17 +32,8 @@
     "title": "Vercel Changelog: npm i chat (Chat SDK)",
     "summary": "Vercel'in Chat SDK duyurusu: tek TypeScript kod tabanıyla Slack, Teams, Discord, GitHub ve diğer platformlara bot dağıtma yaklaşımı.",
     "tags": "ai-sdk bots chat-sdk typescript vercel",
-    "content": "Bu changelog, `chat` paketini public beta olarak tanıtıyor.\n\nÖne çıkan noktalar:\n\n- Tek kod tabanıyla birden fazla chat platformuna bot dağıtımı\n- Event-driven ve type-safe handler modeli (mention, message, reaction, slash command vb.)\n- JSX ile platforma uyarlanan kart/modaI UI bileşenleri\n- Durum yönetimi için pluggable adapter yaklaşımı (Redis/ioredis/in-memory)\n- `post()` çağrılarında AI SDK text stream desteği ile gerçek zamanlı yanıt akışı\n\nEk doküman: https://chat-sdk.dev/docs",
+    "content": "Bu changelog, `chat` paketini public beta olarak tanıtıyor.\n\nÖne çıkan noktalar:\n\n- Tek kod tabanıyla birden fazla chat platformuna bot dağıtımı\n- Event-driven ve type-safe handler modeli (mention, message, reaction, slash command vb.)\n- JSX ile platforma uyarlanan kart/modal UI bileşenleri\n- Durum yönetimi için pluggable adapter yaklaşımı (Redis/ioredis/in-memory)\n- `post()` çağrılarında AI SDK text stream desteği ile gerçek zamanlı yanıt akışı\n\nEk doküman: https://chat-sdk.dev/docs",
     "url": "/bookmarks/vercel-chat-sdk-changelog"
-  },
-  {
-    "id": "project:realtime-observability-dashboard",
-    "type": "project",
-    "title": "Realtime Observability Dashboard",
-    "summary": "Log, metric ve alert akışlarını tek panelde birleştirerek incident triage süresini kısaltan iç platform projesi.",
-    "tags": "dashboard dx observability react",
-    "content": "## Problem\nOperasyon ekibi farklı dashboard ve araçlar arasında sürekli context switch yaptığı için incident analizi uzuyordu.\n\n## Yaklaşım\nEvent kaynaklarını tek bir normalizasyon katmanında birleştirip kritik sinyaller için önceliklendirme mekanizması kurdum.\n\n## Sonuç\nOrtalama tespit ve müdahale süresi görünür biçimde düştü, alert yorgunluğu azaldı.",
-    "url": "/projects/realtime-observability-dashboard"
   },
   {
     "id": "note:clean-architecture-on-nextjs",
@@ -54,15 +54,6 @@
     "url": "/writing/ship-faster-with-content-schemas"
   },
   {
-    "id": "project:content-pipeline-rewrite",
-    "type": "project",
-    "title": "Content Pipeline Rewrite",
-    "summary": "Markdown odaklı içerik üretimini otomatik validasyon ve statik index ile ölçeklenebilir hale getiren yeniden yazım çalışması.",
-    "tags": "automation content typescript",
-    "content": "## Problem\nİçerik ekleme süreçleri elle ve dağınık yürüdüğü için yayın kalitesi düşüyordu.\n\n## Yaklaşım\nFrontmatter doğrulaması, slug çakışma kontrolü ve build-time arama index üretimini aynı pipeline içinde topladım.\n\n## Sonuç\nEditöryel ekip daha hızlı yayın almaya başladı; hatalı içerik deploy edilmesi belirgin şekilde azaldı.",
-    "url": "/projects/content-pipeline-rewrite"
-  },
-  {
     "id": "note:client-search-at-static-scale",
     "type": "note",
     "title": "Static Sitelerde Hızlı Client-side Arama",
@@ -70,14 +61,5 @@
     "tags": "performance search static-site",
     "content": "Küçük ve orta ölçekli içerik sitelerinde aramayı sunucu endpointine taşımak çoğu zaman gereksiz karmaşıklık oluşturuyor.\n\n## Yaklaşım\nBuild sırasında JSON index üret, istemcide query ile filtrele ve temel skorlamayı title/tag eşleşmesine göre yap.\n\n## Sonuç\nMaliyet düşük kalırken algılanan performans yüksek oluyor.",
     "url": "/writing/client-search-at-static-scale"
-  },
-  {
-    "id": "project:performance-budget-rollout",
-    "type": "project",
-    "title": "Performance Budget Rollout",
-    "summary": "Web performans metriklerini release gate haline getirerek Core Web Vitals regresyonlarını erken aşamada yakalayan süreç.",
-    "tags": "frontend performance web-vitals",
-    "content": "## Problem\nSprint sonunda fark edilen performans sorunları düzeltme maliyetini yükseltiyordu.\n\n## Yaklaşım\nKritik sayfalar için bütçe sınırları tanımlayıp CI aşamasında eşik ihlalinde build'i durduran kontrol ekledim.\n\n## Sonuç\nRegresyonlar prod öncesinde yakalanmaya başladı ve kullanıcı deneyimi daha stabil hale geldi.",
-    "url": "/projects/performance-budget-rollout"
   }
 ]
