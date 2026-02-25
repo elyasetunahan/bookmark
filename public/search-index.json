@@ -1,5 +1,14 @@
 [
   {
+    "id": "project:nextjs-to-vinext-migration-plan",
+    "type": "project",
+    "title": "Mevcut Next.js Projesini vinext'e Taşıma Planı",
+    "summary": "Cloudflare vinext yaklaşımına göre eldeki bir Next.js projesini Vite tabanlı vinext ve Cloudflare Workers hedefine taşımak için teknik geçiş planı.",
+    "tags": "cloudflare-workers migration nextjs vinext vite",
+    "content": "## Problem\nMevcut Next.js proje akışında Node dev/runtime ile hedef serverless runtime arasında farklar var. Ayrıca deploy zinciri platforma özel dönüşümler gerektiriyor.\n\n## Hedef\nEldeki Next.js kod tabanını minimum kırılım ile vinext'e geçirip Cloudflare Workers üzerinde çalıştırmak.\n\n## Varsayımlar\n- Proje App Router veya Pages Router kullanıyor.\n- Kod tabanı tamamen statik pre-render bağımlısı değil.\n- Cloudflare hesabı, Workers ve KV altyapısı erişilebilir.\n\n## Geçiş Planı\n### 1) Hazırlık ve Envanter\n1. Mevcut Next.js sürümü, router tipi ve runtime bağımlılıklarını çıkar.\n2. `generateStaticParams()` ve build-time static pre-render bağımlı sayfaları listele.\n3. Middleware, Server Actions ve cache stratejisini dökümante et.\n\n### 2) Teknik POC Branch\n1. Ayrı bir migration branch aç.\n2. `vinext` kur:\n   - `npm install vinext`\n3. Script'lerde `next` yerine `vinext` kullan:\n   - `vinext dev`\n   - `vinext build`\n4. Lokal smoke test: kritik route'lar, form submit, auth akışları.\n\n### 3) Runtime ve Caching Uyarlaması\n1. Cloudflare Workers deploy hedefini etkinleştir.\n2. ISR için KV tabanlı cache handler entegre et:\n   - `KVCacheHandler` + `setCacheHandler(...)`\n3. Gerekirse cache backe",
+    "url": "/projects/nextjs-to-vinext-migration-plan"
+  },
+  {
     "id": "project:vercel-chat-microsoft-teams",
     "type": "project",
     "title": "Vercel Chat'i Microsoft Teams'e Entegre Etme",
