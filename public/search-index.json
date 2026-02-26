@@ -1,5 +1,14 @@
 [
   {
+    "id": "note:codex-verimli-kullanim-rehberi",
+    "type": "note",
+    "title": "Codex'ten Verimli Yararlanma Rehberi",
+    "summary": "Codex ile daha hızlı ve tutarlı çıktı almak için AGENTS.md, skills, instructions ve README dosyalarını nasıl birlikte kullanabileceğini pratik örneklerle anlatan rehber.",
+    "tags": "ai codex developer-experience documentation workflow",
+    "content": "Codex'i verimli kullanmanın ana kuralı, modele daha fazla konuşmak değil daha iyi bağlam vermektir. Bağlamı düzenli tuttuğunda hem daha hızlı hem daha az tekrar ile sonuç alırsın.\n\n## 1) AGENTS.md: Çalışma Kurallarını Kilitle\n`AGENTS.md`, ajan için \"çalışma anlaşması\" gibidir. Projede nasıl hareket edeceğini, neyi önceleyeceğini ve hangi araçları nasıl kullanacağını burada sabitlersin.\n\n### Ne koymalı?\n- Kod stili ve edit kuralları\n- Test beklentileri\n- Commit/push alışkanlıkları\n- Özel komut tercihleri (örn. `rg` kullanımı)\n\n### Basit örnek\n\"Bu repoda dosya ararken önce `rg --files`, test için önce `npm run test`, commit mesajları `feat/fix/chore` prefix'i ile atılsın.\"\n\n## 2) Skills: Tekrarlanan İşleri Paketle\n`skills`, belirli iş türleri için mini prosedürlerdir. Örneğin frontend tasarım, playwright test veya PDF üretimi gibi.\n\n### Ne zaman skill kullanmalı?\n- Aynı tip görev sık geliyorsa\n- Belli bir kalite standardı korunacaksa\n- Araç zinciri her seferinde aynıysa\n\n### Basit örnek\n\"[$frontend-design] kullanarak landing page hero bölümünü yeniden tasarla; mevcut renk sistemini koru, sadece tipografi ve yerleşimi iyileştir.\"\n\nBu tarz net bir çağrı, modelin genel amaçlı davranış y",
+    "url": "/writing/codex-verimli-kullanim-rehberi"
+  },
+  {
     "id": "bookmark:front-end-checklist-by-thedaviddias",
     "type": "bookmark",
     "title": "Front-End Checklist (thedaviddias)",
