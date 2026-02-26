@@ -86,3 +86,30 @@ Doğrulama: [çalıştırılacak komutlar]
 ```
 
 Bu şablon tek başına bile Codex çıktısının kalitesini belirgin artırır.
+
+## 7) Ek Verim Katmanları (Opsiyonel ama Etkili)
+AGENTS.md, skills, instructions ve README omurgayı kurar. Aşağıdaki dosyalar bu omurgayı operasyonel olarak güçlendirir.
+
+### `CONTRIBUTING.md`
+- PR akışı, commit standardı, branch modeli ve review beklentisini netleştirir.
+- Örnek: `feat/*` branch adı + PR'da zorunlu \"test çıktısı\" bölümü.
+
+### `docs/ARCHITECTURE.md` + `docs/adr/*.md`
+- Mimarinin neden bu şekilde olduğunu kaydeder; modelin yanlış varsayım riskini düşürür.
+- Örnek: \"neden Redis seçildi, neden queue gerekli\" gibi karar kayıtları.
+
+### `TESTING.md`
+- Hangi durumda hangi testin çalışacağına karar ağacı verir.
+- Örnek: UI değişimi -> `npm run test:e2e`, domain logic -> `npm run test`.
+
+### `ENVIRONMENT.md` + `.env.example`
+- Gerekli environment değişkenlerini ve formatlarını sabitler.
+- Örnek: `TEAMS_BOT_APP_ID`, `TEAMS_BOT_APP_SECRET`, `KV_NAMESPACE_ID`.
+
+### `RUNBOOK.md`
+- Deploy/rollback/incident akışını operasyonel sırayla tanımlar.
+- Örnek: \"error rate > %2 olursa rollback komutu ve kontrol adımları\".
+
+### `.github/pull_request_template.md` ve issue template'leri
+- Teslim formatını standart hale getirir; kalite sinyalini artırır.
+- Örnek: \"Kapsam / Risk / Test Kanıtı / Rollback Planı\" alanları.
