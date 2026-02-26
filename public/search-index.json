@@ -61,32 +61,5 @@
     "tags": "ai-sdk bots chat-sdk typescript vercel",
     "content": "Bu changelog, `chat` paketini public beta olarak tanıtıyor.\n\nÖne çıkan noktalar:\n\n- Tek kod tabanıyla birden fazla chat platformuna bot dağıtımı\n- Event-driven ve type-safe handler modeli (mention, message, reaction, slash command vb.)\n- JSX ile platforma uyarlanan kart/modal UI bileşenleri\n- Durum yönetimi için pluggable adapter yaklaşımı (Redis/ioredis/in-memory)\n- `post()` çağrılarında AI SDK text stream desteği ile gerçek zamanlı yanıt akışı\n\nEk doküman: https://chat-sdk.dev/docs",
     "url": "/bookmarks/vercel-chat-sdk-changelog"
-  },
-  {
-    "id": "note:clean-architecture-on-nextjs",
-    "type": "note",
-    "title": "Next.js App Router'da Clean Architecture Sınırları",
-    "summary": "App Router projelerinde domain, application ve UI sınırlarını pratikte nerede çizdiğime dair notlar.",
-    "tags": "architecture nextjs typescript",
-    "content": "Monorepo veya tek repo fark etmeksizin, içerik ve domain servislerini framework bağımsız tutmak uzun vadede değişim maliyetini azaltıyor.\n\n## Sınır Prensibi\nUI katmanı yalnızca use-case çağırmalı; veri erişim detayını bilmemeli.\n\n## Pratik Sonuç\nTest kapsamını artırmak kolaylaşıyor ve framework geçişleri daha düşük riskle yönetiliyor.",
-    "url": "/writing/clean-architecture-on-nextjs"
-  },
-  {
-    "id": "note:ship-faster-with-content-schemas",
-    "type": "note",
-    "title": "Content Schema ile Daha Hızlı ve Güvenli Yayın",
-    "summary": "Frontmatter şeması ve otomatik validasyon ile içerik operasyonunda hız kazanma deneyimi.",
-    "tags": "content workflow zod",
-    "content": "İçerik hatalarının büyük bölümü yapısal tutarsızlıklardan geliyor. Basit bir Zod şeması bile yayın kalitesini ciddi artırıyor.\n\n## Kritik Alanlar\n- slug standardizasyonu\n- tarih formatı\n- zorunlu özet ve etiketler\n\nBu üçlü tek başına arama ve filtre deneyimini güçlendiriyor.",
-    "url": "/writing/ship-faster-with-content-schemas"
-  },
-  {
-    "id": "note:client-search-at-static-scale",
-    "type": "note",
-    "title": "Static Sitelerde Hızlı Client-side Arama",
-    "summary": "Build-time index üreterek runtime backend olmadan karma içerikte hızlı arama sunma yaklaşımı.",
-    "tags": "performance search static-site",
-    "content": "Küçük ve orta ölçekli içerik sitelerinde aramayı sunucu endpointine taşımak çoğu zaman gereksiz karmaşıklık oluşturuyor.\n\n## Yaklaşım\nBuild sırasında JSON index üret, istemcide query ile filtrele ve temel skorlamayı title/tag eşleşmesine göre yap.\n\n## Sonuç\nMaliyet düşük kalırken algılanan performans yüksek oluyor.",
-    "url": "/writing/client-search-at-static-scale"
   }
 ]
