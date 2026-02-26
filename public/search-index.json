@@ -1,5 +1,14 @@
 [
   {
+    "id": "bookmark:front-end-checklist-by-thedaviddias",
+    "type": "bookmark",
+    "title": "Front-End Checklist (thedaviddias)",
+    "summary": "Modern web projeleri için HTML, CSS, JavaScript, performans, erişilebilirlik, SEO ve güvenlik başlıklarında kapsamlı kontrol listesi.",
+    "tags": "accessibility checklist frontend performance security seo",
+    "content": "Bu repo, production'a çıkmadan önce frontend tarafında kontrol edilmesi gereken maddeleri tek bir listede topluyor.\n\nÖne çıkan kullanım şekli:\n\n- Proje template'i oluştururken başlangıç checklist'i olarak kullanma\n- PR/release sürecinde doğrulama adımlarını standardize etme\n- Ekip içinde kalite kriterlerini ortaklaştırma\n\nÖzellikle performans, erişilebilirlik ve SEO maddelerini bir arada ele alması nedeniyle hızlı kalite taraması için oldukça faydalı.",
+    "url": "/bookmarks/front-end-checklist-by-thedaviddias"
+  },
+  {
     "id": "project:nextjs-to-vinext-migration-plan",
     "type": "project",
     "title": "Mevcut Next.js Projesini vinext'e Taşıma Planı",
