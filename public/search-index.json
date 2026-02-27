@@ -1,5 +1,14 @@
 [
   {
+    "id": "note:gunluk-yazilimci-rutini-odak-plani",
+    "type": "note",
+    "title": "Günlük Yazılımcı Rutini: Odaklı Çalışma Planı",
+    "summary": "Güne dağılmadan başlamak, teknik işi bloklara ayırmak ve günü temiz kapatmak için uygulanabilir bir günlük çalışma planı.",
+    "tags": "daily-workflow engineering focus productivity",
+    "content": "Günün sonunda “çok çalıştım ama ilerlemedim” hissi genelde plansız bağlam geçişinden gelir. Çözüm, günü küçük ama net bloklara ayırmaktır.\n\n## Önerilen Günlük Akış\n\n### 1) 15 dk Planlama\n- Bugünün tek ana çıktısını yaz.\n- En kritik görevi ilk bloğa koy.\n- Toplantı/mesaj trafiğini blokların dışına al.\n\n### 2) 90 dk Derin Çalışma Bloğu\n- Bildirimleri kapat.\n- Sadece tek göreve odaklan.\n- Blok bitene kadar context değiştirme.\n\n### 3) 20 dk Teknik Temizlik\n- Commit mesajlarını düzelt.\n- Küçük refactor veya naming temizliği yap.\n- Yarım kalan işi not al.\n\n### 4) 30 dk İletişim ve Senkron\n- PR yorumu yanıtla.\n- Ekip güncellemesi geç.\n- Risk/engel varsa erken paylaş.\n\n### 5) Gün Sonu Kapanış (10 dk)\n- Yarın yapılacak ilk işi tek cümle yaz.\n- Açık kalan TODO'ları issue veya note'a taşı.\n- Çalışma ağacını temiz bırak.\n\n## Neden İşe Yarıyor?\n- Sürekli bağlam değişimini azaltır.\n- Küçük ama ölçülebilir ilerleme sağlar.\n- Gün sonu yorgunluğunda karar maliyetini düşürür.\n\n## Basit Uygulama Kuralı\nHer gün sadece şunu takip etmek bile yeterli:\n\"İlk 90 dakika tek iş, gün sonu 10 dakika kapanış.\"",
+    "url": "/writing/gunluk-yazilimci-rutini-odak-plani"
+  },
+  {
     "id": "note:codex-verimli-kullanim-rehberi",
     "type": "note",
     "title": "Codex'ten Verimli Yararlanma Rehberi",
