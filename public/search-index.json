@@ -1,5 +1,14 @@
 [
   {
+    "id": "note:seomachine-codex-entegrasyon-rehberi",
+    "type": "note",
+    "title": "seomachine'i Codex'e Entegre Etme Rehberi",
+    "summary": "TheCraigHewitt/seomachine yapısını Codex akışına uyarlayıp araştırma, yazım ve optimizasyon süreçlerini tek bir içerik üretim pipeline'ına dönüştürme rehberi.",
+    "tags": "codex content integration seo workflow",
+    "content": "`seomachine` açık kaynak bir \"SEO içerik üretim workspace\" yapısı sunuyor. Temelde araştırma -> yazım -> optimizasyon döngüsünü standartlaştırıyor. Repo Claude Code etrafında tasarlanmış olsa da, aynı yapıyı Codex ile verimli şekilde çalıştırmak mümkün.\n\nRepo: https://github.com/TheCraigHewitt/seomachine\n\n## seomachine'den Alınacak Ana Yapı\nRepoda özellikle şu klasör düzeni dikkat çekiyor:\n\n- `context/` (brand voice, SEO kuralları, link haritası gibi kalıcı bağlam)\n- `topics/` (işlenecek konu havuzu)\n- `research/` (araştırma çıktıları)\n- `drafts/` (ilk taslaklar)\n- `output/` ve `published/` (son içerik ve yayın takibi)\n\nBu ayrım Codex tarafında da çok değerli, çünkü modelin her task'ta doğru dosyaya yazmasını kolaylaştırıyor.\n\n## Codex Tarafında Entegrasyon Planı\n\n### 1) CLAUDE.md -> AGENTS.md eşlemesi\n`seomachine` içinde Claude odaklı yönergeler var. Codex'te bunun karşılığı `AGENTS.md`.\n\nNe yapılmalı:\n- İçerik kalitesi kuralları\n- SEO kontrol listesi\n- Yazım tonu\n- Komut ve çıktı formatı beklentisi\n\nhepsi `AGENTS.md` içine taşınmalı.\n\nBasit örnek:\n\n```md\nSEO yazılarında başlıkta ana keyword geçmeli.\nİlk 120 kelimede konu vaadi net olmalı.\nHer yazıda en az 3 iç link önerisi üret.\n",
+    "url": "/writing/seomachine-codex-entegrasyon-rehberi"
+  },
+  {
     "id": "note:gunluk-yazilimci-rutini-odak-plani",
     "type": "note",
     "title": "Günlük Yazılımcı Rutini: Odaklı Çalışma Planı",
