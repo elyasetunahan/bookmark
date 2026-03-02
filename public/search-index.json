@@ -1,5 +1,14 @@
 [
   {
+    "id": "project:codex-multi-agent-collab-plan",
+    "type": "project",
+    "title": "Codex ile Çift-Ajan Eş Zamanlı Çalışma Planı",
+    "summary": "Aynı klasörde çalışan iki Codex ajanını kontrollü şekilde koordine etmek için operasyonel plan ve dosya tabanlı protokol.",
+    "tags": "automation codex collaboration engineering multi-agent workflow",
+    "content": "## Hedef\nAynı klasörü dinleyen iki Codex ajanının (A ve B) eş zamanlı çalışmasını güvenli, deterministik ve tekrar edilebilir hale getirmek. Ana amaç: hız kazanırken kaliteyi ve izlenebilirliği korumak.\n\n## Temel İlke ve Varsayımlar\n- **Tek iletişim kanalı:** Dosya tabanlı mesajlaşma (ör. `chat.md`).\n- **Tek karar kaynağı:** Karar kayıtları için ayrı dosya (ör. `decisions.md`).\n- **Çakışma kontrolü:** Her ajan kendi iş alanını açıkça ilan eder ve dosya kilidi yaklaşımı uygular.\n- **İş parçalama:** Modüler görev parçaları; tek ajan = tek parçayı sahiplenir.\n\n## Mimari Yaklaşım\n### 1) İletişim Protokolü (Dosya Tabanlı)\n- `chat.md`: senkronizasyon ve kısa mesajlar\n- `decisions.md`: alınan kararlar (ne, neden, ne zaman)\n- `status.md`: her ajanın anlık durum ve sahiplik kaydı\n\n**Mesaj formatı (örnek):**\n```\n## [Ajan-A] - Mesaj #12\nSaat: 10:42\nKonu: combat sistemine kritik fix\nDurum: Uyguluyor\nNot: rooms.js ile çakışma riski yok\n```\n\n**Karar formatı (örnek):**\n```\n## Karar #5: Save/Load Yapısı\nTarih: 2026-03-02\nKarar: JSON tabanlı state snapshot\nGerekçe: hızlı prototip + debuggability\nSahip: Ajan-B\n```\n\n## Çalışma Planı\n### Faz 0 — Kurulum\n1. Ortak klasörde `chat.md`, `decisions.md`, `st",
+    "url": "/projects/codex-multi-agent-collab-plan"
+  },
+  {
     "id": "bookmark:component-gallery-reference",
     "type": "bookmark",
     "title": "The Component Gallery",
