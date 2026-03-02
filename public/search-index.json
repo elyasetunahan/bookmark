@@ -1,5 +1,23 @@
 [
   {
+    "id": "bookmark:component-gallery-reference",
+    "type": "bookmark",
+    "title": "The Component Gallery",
+    "summary": "Güncel UI component örneklerini ve farklı tasarım sistemlerindeki varyasyonları referans olarak toplayan galeri.",
+    "tags": "components design-systems reference ui",
+    "content": "Component Gallery, birçok tasarım sistemindeki bileşen örneklerini tek yerde toplar.\n\nÖne çıkan kullanım:\n- Bileşen varyasyonlarını hızlıca görmek\n- Tasarım sistemi karşılaştırması yapmak\n- UI kararlarını örneklerle desteklemek",
+    "url": "/bookmarks/component-gallery-reference"
+  },
+  {
+    "id": "bookmark:launch-ui-landing-kit",
+    "type": "bookmark",
+    "title": "Launch UI: Next.js Landing Page Kit",
+    "summary": "Next.js, shadcn/ui ve Tailwind ile hazırlanmış, kopyala-yapıştır odaklı landing page bileşen seti.",
+    "tags": "landing-page nextjs shadcn tailwind ui-kit",
+    "content": "Launch UI, üretime hazır landing page bileşenlerini içerir.\n\nÖne çıkan noktalar:\n- Next.js + Tailwind + shadcn/ui tabanlı\n- SEO ve responsive odaklı örnekler\n- Bileşenleri doğrudan projeye kopyalayarak hızla başlama imkanı",
+    "url": "/bookmarks/launch-ui-landing-kit"
+  },
+  {
     "id": "note:seomachine-codex-entegrasyon-rehberi",
     "type": "note",
     "title": "seomachine'i Codex'e Entegre Etme Rehberi",
