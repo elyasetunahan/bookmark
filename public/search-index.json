@@ -1,5 +1,14 @@
 [
   {
+    "id": "bookmark:anthropic-skilljar-learning-hub",
+    "type": "bookmark",
+    "title": "Anthropic Skilljar Learning Hub",
+    "summary": "Anthropic ekosistemi icin kurs ve egitim iceriklerini tek yerde toplayan resmi ogrenme merkezi.",
+    "tags": "ai anthropic learning playbooks training",
+    "content": "Bu portal, Anthropic odakli egitimleri daginik kaynaklardan toparlayip daha sistematik bir ogrenme akisina ceviriyor.\n\nOne cikan kullanim:\n\n- Ekip icinde ortak AI bilgi tabani olusturmak\n- Onboarding surecini net bir egitim hattina baglamak\n- Model kullanimi ve guvenlik pratiklerini guncel tutmak",
+    "url": "/bookmarks/anthropic-skilljar-learning-hub"
+  },
+  {
     "id": "project:codex-multi-agent-collab-plan",
     "type": "project",
     "title": "Codex ile Çift-Ajan Eş Zamanlı Çalışma Planı",
