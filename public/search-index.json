@@ -1,5 +1,14 @@
 [
   {
+    "id": "bookmark:openai-symphony",
+    "type": "bookmark",
+    "title": "OpenAI Symphony",
+    "summary": "OpenAI'nin çok-ajanlı iş akışları oluşturmak için geliştirdiği açık kaynaklı orkestrasyon framework'ü.",
+    "tags": "ai multi-agent openai orchestration python",
+    "content": "Symphony, OpenAI tarafından geliştirilen ve birden fazla AI ajanının koordineli şekilde çalışmasını sağlayan bir orkestrasyon framework'üdür.\n\nÖne çıkan kullanım alanları:\n\n- Karmaşık görevleri alt görevlere bölerek uzmanlaşmış ajanlara paralel veya sıralı olarak dağıtmak\n- Ajan-ajan arası iletişim ve durum paylaşımını standart bir arayüzle yönetmek\n- OpenAI modellerini temel alarak üretim düzeyinde çok-ajanlı pipeline'lar inşa etmek",
+    "url": "/bookmarks/openai-symphony"
+  },
+  {
     "id": "bookmark:anthropic-skilljar-learning-hub",
     "type": "bookmark",
     "title": "Anthropic Skilljar Learning Hub",
