@@ -1,5 +1,14 @@
 [
   {
+    "id": "bookmark:react-grab-aiden-bai",
+    "type": "bookmark",
+    "title": "React Grab — Select & Edit Any Element with AI",
+    "summary": "Sayfadaki herhangi bir React elementini seçip Claude Code veya Codex'e değiştirme talimatı vermenizi sağlayan açık kaynaklı CLI aracı.",
+    "tags": "ai claude cli codex dx open-source react",
+    "content": "Aiden Bai tarafından duyurulan React Grab, çalışan bir sayfada herhangi bir elementi görsel olarak seçip Claude Code veya OpenAI Codex'e doğrudan değişiklik talimatı vermeyi mümkün kılıyor.\n\nÖne çıkan kullanım alanları:\n\n- Canlı sayfada bir bileşeni tıklayıp doğal dille yeniden tasarlamak veya refactor etmek\n- Claude Code / Codex entegrasyonuyla AI destekli in-browser düzenleme akışı kurmak\n- `npx react-grab@latest` ile mevcut projeye kurulum gerektirmeden denemek",
+    "url": "/bookmarks/react-grab-aiden-bai"
+  },
+  {
     "id": "bookmark:openai-symphony",
     "type": "bookmark",
     "title": "OpenAI Symphony",
