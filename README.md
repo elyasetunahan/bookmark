@@ -22,6 +22,14 @@ Portfolio-first bilgi sitesi: projeler, blog tarzı writing notları ve bookmark
 - `content/notes/*.md`
 - `content/bookmarks/*.md`
 
+## İçerik Operasyon Kısayolları
+- `bookmark <url veya konu>`: `content/bookmarks` altında yeni kayıt veya güncelleme yapılır.
+- `project <link veya fikir>`: `content/projects` altında teknik plan/proje kaydı oluşturulur.
+- `write <konu>`: `content/notes` altında uzun form yazı oluşturulur.
+
+Her içerik değişiminden sonra arama indexi güncellenir:
+- `npm run build:index`
+
 ## Komutlar
 - `npm run dev` → önce arama indexi üretir, sonra dev server açar
 - `npm run build:index` → `public/search-index.json` üretir
@@ -64,3 +72,15 @@ publishedAt: ISO date string
 url: valid URL
 why: string?
 ```
+
+## Repo Skill Dokümantasyonu
+Bu repoda `bookmark/project/write` akışları için yerel skill dokümanları bulunur:
+
+- `docs/skills/bookmark-repo-orchestrator/SKILL.md`
+- `docs/skills/bookmark-flow/SKILL.md`
+- `docs/skills/project-flow/SKILL.md`
+- `docs/skills/write-flow/SKILL.md`
+- `docs/skills/verification.md`
+
+Hızlı başlangıç için:
+- `docs/skills/README.md`
