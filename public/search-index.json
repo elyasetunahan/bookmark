@@ -1,5 +1,14 @@
 [
   {
+    "id": "bookmark:codex-automation-targeted-refactor",
+    "type": "bookmark",
+    "title": "Codex Automation Prompt for Small Refactors",
+    "summary": "Kod tabanında küçük ve hedefli refactor'lar yaptırmak için paylaşılan Codex automation prompt örneği.",
+    "tags": "ai automation codex dx refactor",
+    "content": "Bu paylaşım, Codex Automation özelliğini kullanarak kod tabanında küçük ama etkili temizlikler yapma yaklaşımını öne çıkarıyor.\n\nÖne çıkan fikir:\n\n- Otomasyonu, “devasa refactor” yerine küçük ve hedefli iyileştirmelere zorlamak\n- Kod tekrarlarını azaltıp bakımı kolaylaştıran düşük riskli düzenlemeler yapmak\n- Düzenli olarak aynı akışı çalıştırıp codebase hijyenini korumak\n\nThread içinde paylaşılan prompt fikri özetle şu yaklaşımı öneriyor:\n\n> Kod tabanında küçük ve hedefli bir refactor fırsatı bul ve uygula. Büyük dosyaları parçalama gibi devasa değişiklikler yapma; daha çok tekrar eden kodu ortaklaştırma gibi küçük adımlara odaklan.",
+    "url": "/bookmarks/codex-automation-targeted-refactor"
+  },
+  {
     "id": "bookmark:paperclip-ai",
     "type": "bookmark",
     "title": "Paperclip AI",
