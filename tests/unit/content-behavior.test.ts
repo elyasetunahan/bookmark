@@ -11,10 +11,10 @@ describe("content behavior", () => {
 
   it("filters writing entries by tag and query", () => {
     const writings = getAllWritings();
-    const filtered = filterEntries(writings, { tag: "search", q: "index" });
+    const filtered = filterEntries(writings, { tag: "workflow", q: "codex" });
 
     expect(filtered.length).toBeGreaterThan(0);
-    expect(filtered.every((entry) => entry.frontmatter.tags.includes("search"))).toBe(true);
+    expect(filtered.every((entry) => entry.frontmatter.tags.includes("workflow"))).toBe(true);
   });
 
   it("paginates collections predictably", () => {
