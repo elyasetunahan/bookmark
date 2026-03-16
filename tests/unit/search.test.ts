@@ -1,3 +1,6 @@
+import fs from "node:fs";
+import path from "node:path";
+
 import { describe, expect, it } from "vitest";
 
 import { getAllContentEntries } from "../../lib/content";
@@ -20,5 +23,15 @@ describe("search", () => {
 
     expect(results.length).toBeGreaterThan(0);
     expect(results.every((result) => result.type === "bookmark")).toBe(true);
+  });
+
+  it("matches the generated static search index", () => {
+    const entries = getAllContentEntries();
+    const expectedDocs = toSearchDocuments(entries);
+    const indexPath = path.join(process.cwd(), "public", "search-index.json");
+    const actualDocs = JSON.parse(fs.readFileSync(indexPath, "utf8")) as typeof expectedDocs;
+
+    expect(actualDocs).toHaveLength(expectedDocs.length);
+    expect(new Set(actualDocs.map((doc) => doc.id))).toEqual(new Set(expectedDocs.map((doc) => doc.id)));
   });
 });
